@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * main - output the warnin
+ * main - function that prints a string then exits.
  *
- * Return : EXIT_SUCCESS
-*/
+ * Return: always 0 (SUCCESS)
+ */
 int main(void)
 {
 printf("with proper grammar, but the outcome is a piece of art,\n");
