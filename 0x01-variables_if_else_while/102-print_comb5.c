@@ -13,7 +13,7 @@ int main(void)
 
 	for (k = 0; k < 10; k++)
 	{
-	for (kk = 0; kk < 10; kk++){
+	for (kk = 1; kk < 10; kk++){
 	
 	for (i = 0; i < 10; i++)
 	{
