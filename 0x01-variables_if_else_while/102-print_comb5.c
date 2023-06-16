@@ -1,37 +1,30 @@
 #include <stdio.h>
 /**
- * main - qmlkfqmlfd
- *
- * Return: qlmkdfqmd
+* main - qmlfkjqmldkfmqdf
+*
+* Return: qmljkfdqmd4
 */
 int main(void)
 {
-	int i;
-	int j;
-	int k;
-	int kk;
+int i;
+int j;
 
-	for (k = 0; k < 10; k++)
-	{
-	for (kk = 1; kk < 10; kk++){
-	
-	for (i = 0; i < 10; i++)
-	{
-		for (j = 0; j < 10; j++)
-		{	
-			putchar(k + '0');
-			putchar(kk + '0');
-			putchar(' ');
-			putchar(i + '0');
-			putchar(j + '0');
-			if (i == 9 && j == 9 && k == 9 && kk == 9)
-				break;
-			putchar(',');
-			putchar(' ');
-		}	
-	}
-	}
-	}
-	putchar('\n');
-	return (0);
+for (i = 0 ; i < 100; i++)
+{
+for (j = 0; j < 100; j++)
+{
+putchar(i / 10 + '0');
+putchar(i % 10 + '0');
+putchar(' ');
+putchar(j / 10 + '0');
+putchar(j % 10 + '0');
+if (i < 99 && j < 99)
+{
+putchar(',');
+putchar(' ');
+}
+}
+}
+putchar('\n');
+return (0);
 }
