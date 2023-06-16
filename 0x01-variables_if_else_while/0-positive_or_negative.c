@@ -4,7 +4,7 @@
 /**
  * main - display if n is negative of posetive or nul
  *
- * Return : always 0(SUCCESS)
+ * Return: always 0(SUCCESS)
  */
 int main(void)
 {
@@ -12,6 +12,7 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	(n < 0) ? printf("is negative") : (n == 0) ? printf("is posetive") : printf("is zero");
+	(n < 0) ? printf("%d is negative", n) : (n == 0) ?
+		printf("%d is zero", n) : printf("%d is positive", n);
 	return (0);
 }
