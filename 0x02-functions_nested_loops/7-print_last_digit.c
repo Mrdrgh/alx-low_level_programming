@@ -5,9 +5,12 @@
  * @n: the perimiter to checck
  * Return: return the last digit of the n
 */
-int _abs(int n);
 int print_last_digit(int n)
 {
-	_putchar(_abs(n) % 10 + '0');
-	return (_abs(n) % 10);
+	if (n < 0)
+	{
+		n = -n;
+	}
+	_putchar(n % 10 + '0');
+	return (n % 10);
 }
