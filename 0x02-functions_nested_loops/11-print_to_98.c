@@ -31,11 +31,11 @@ int j;
 		{
 			if (j != 98)
 			{
-				printf("%d, ", i);
+				printf("%d, ", j);
 			}
 			else
 			{
-				printf("%d\n", i);
+				printf("%d\n", j);
 			}
 		}
 	}
