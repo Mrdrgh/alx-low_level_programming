@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * fizzbuzz - the fizz buzz test
+ * main - the fizz buzz test
  * Return: always 0
 */
 
@@ -26,6 +26,7 @@ int main(void)
 		}
 		printf(" ");
 	}
+	printf("\n");
 	return (0);
 }
 
