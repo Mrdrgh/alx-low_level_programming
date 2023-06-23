@@ -27,7 +27,7 @@ int main(void)
 	{
 		while (n % i == 0)
 		{
-			max = i
+			maximum = i;
 			n = n / i;
 		}
 	}
@@ -35,6 +35,6 @@ int main(void)
 	{
 		maximum = n;
 	}
-	printf("%ld");
+	printf("%ld", maximum);
 	return (0);
 }
