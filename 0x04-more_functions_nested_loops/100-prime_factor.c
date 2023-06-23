@@ -22,14 +22,15 @@ int main(void)
 		maximum = 3;
 		n = n / 3;
 	}
+
 	for (i = 5; i < sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
 		{
-			while ( n % i == 0)
-			{
-				max = i
-				n = n / i;
-			}
+			max = i
+			n = n / i;
 		}
+	}
 	if (n > 2)
 	{
 		maximum = n;
