@@ -3,7 +3,7 @@
  * puts2 - puts a string to stdout
  * @str: the string to output
 */
-void _puts(char *str)
+void puts2(char *str)
 {
 	char *p = str;
 
