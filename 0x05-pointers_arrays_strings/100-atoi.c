@@ -7,12 +7,12 @@
 
 int _atoi(char *s)
 {
-	int k;
+	int k = 0;
 	char *p = s;
 
 	while ((*p))
 	{
-		k = (k << 3) + (k << 1) + *p - '0';
+		k = (k << 3) + (k <<  1) + *p - '0';
 		p++;
 	}
 
