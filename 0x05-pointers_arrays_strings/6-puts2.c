@@ -9,7 +9,7 @@ void _puts(char *str)
 
 	while ((*p))
 	{
-		if ((s - str) % 2 == 0)
+		if ((p - str) % 2 == 0)
 		{
 		_putchar(*p);
 		}
