@@ -1,0 +1,20 @@
+#include "main.h"
+/**
+ * _atoi - atoi
+ * @s: the sring to convert
+ * Return: the result
+*/
+
+int _atoi(char *s)
+{
+	int k;
+	char *p = s;
+
+	while ((*p))
+	{
+		k = (k >> 3) + (k >> 1) + *p - '0';
+		p++;
+	}
+
+	return ((s[0] == '-') ? -k : k);
+}
