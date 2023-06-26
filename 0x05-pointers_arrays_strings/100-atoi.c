@@ -19,5 +19,5 @@ int _atoi(char *s)
 		p++;
 	}
 
-	return ((s[0] == '-') ? -k : k);
+	return (k);
 }
