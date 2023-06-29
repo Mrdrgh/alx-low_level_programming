@@ -15,11 +15,11 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (*p < *q)
 		{
-			return (-15);
+			return (*p - *q);
 		}
 		else if (*p > *q)
 		{
-			return (15);
+			return (*p - *q);
 		}
 		p++;
 		q++;
