@@ -11,7 +11,7 @@ char *cap_string(char *c)
 		';', '.', '!', '?', '"', '(', ')', '{', '}'};
 	char *p = c;
 	char *q;
-	
+
 	if (*p >= 'a' && *p <= 'z')
 	{
 		*p -= 32;
@@ -21,7 +21,7 @@ char *cap_string(char *c)
 		q = separators;
 		while (*q)
 		{
-			if (*p == *q && *(p + 1) != '\0' 
+			if (*p == *q && *(p + 1) != '\0'
 			&& *(p + 1) >= 'a' && *(p + 1) <= 'z')
 			{
 				*(p + 1) -= 32;
@@ -33,4 +33,3 @@ char *cap_string(char *c)
 	}
 	return (c);
 }
-
