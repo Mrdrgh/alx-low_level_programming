@@ -20,6 +20,5 @@ char *_strncpy(char *dest, char *src, int n)
 		p++;
 		q++;
 	}
-	*q = '\0';
 	return (dest);
 }
