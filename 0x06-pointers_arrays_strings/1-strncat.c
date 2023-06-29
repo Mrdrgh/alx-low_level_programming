@@ -12,14 +12,14 @@ char *_strncat(char *dest, char *src, int n)
 	int i = 0;
 	char *p = src;
 	char *q = dest;
-	
+
 	while (*q)
 	{
 		q++;
 	}
 	while (i < n && *p)
 	{
-		*q = *p ;
+		*q = *p;
 		i++;
 		p++;
 		q++;
