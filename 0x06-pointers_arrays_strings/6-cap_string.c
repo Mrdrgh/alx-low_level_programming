@@ -7,18 +7,18 @@
 
 char *cap_string(char *c)
 {
-	char separators[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+	char separators[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 	char *p = c;
-	char *q ;
+	char *q;
 
 	while (*p)
 	{
 		q = separators;
 		while (*q)
 		{
-			if (*p == *q && *(p+1) >= 'a' && *(p+1) <= 'z')
+			if (*p == *q && *(p + 1) != '\0' && *(p + 1) >= 'a' && *(p + 1) <= 'z')
 			{
-				*(++p) -= 32;
+				*(p + 1) -= 32;
 				break;
 			}
 			q++;
