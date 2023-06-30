@@ -7,31 +7,20 @@
 
 char *leet(char *c)
 {
-	char *p = c;
+	char leet[] = {'a', 'A', 'e', 'E', 'o', 'O','t', 'T', 'l', 'L'};
+	char decode[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+	int i, j;
 
-	while (*p)
+	for (i = 0; c[i] != '\0'; i++)
 	{
-		if (*p == 'a' || *p == 'A')
+		for (j = 0; j < 10; j++)
 		{
-			*p = '4';
+			if (c[i] == leet[j])
+			{
+				c[i] = decode[j];
+				break;
+			}
 		}
-		else if (*p == 'e' || *p == 'E')
-		{
-			*p = '3';
-		}
-		else if (*p == 'o' || *p == 'O')
-		{
-			*p = '0';
-		}
-		else if (*p == 't' || *p == 'T')
-		{
-			*p = '7';
-		}
-		else if (*p == 'l' || *p == 'L')
-		{
-			*p = '1';
-		}
-		p++;
 	}
 	return (c);
 }
