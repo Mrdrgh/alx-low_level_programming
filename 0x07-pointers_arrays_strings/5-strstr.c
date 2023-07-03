@@ -13,31 +13,20 @@ char *_strstr(char *haystack, char *needle)
 	int needle_len = 0, haystack_len = 0;
 	int i;
 
-	while (*p)
+	for (; *haystack != '\0'; haystack++)
 	{
-		haystack_len++;
-		p++;
-	}
-	while (*q)
-	{
-		needle_len++;
-	}
-	p = haystack;
-	while (*(p + needle_len))
-	{
+		p = haystack;
 		q = needle;
-		for (i = 0; i < needle_len; i++)
+		while (*p == *q && *q != '\0')
 		{
-			if (needle[i+1] == '\0')
-			{
-				return (p);
-			}
-			if (*(p + i) != needle[i])
-			{
-				return ('\0');
-			}
+			p++;
+			q++;
 		}
-		p++;
+
+		if (*q == '\0')
+		{
+			return (haystack);
+		}
 	}
 	return ('\0');
 }
