@@ -15,7 +15,7 @@ int is_prime_number(int n)
 	}
 	if (n == 2)
 	{
-		return (n == 2) ? 1 : 0 ;
+		return (n == 2) ? 1 : 0;
 	}
 	for (p = 3; p * p < n; p += 2)
 	{
