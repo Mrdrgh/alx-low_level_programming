@@ -1,10 +1,12 @@
 #include "main.h"
+
+int is_natural(int i, int n);
+
 /**
  * _sqrt_recursion - returns the natural square root of in int
  * @n: the int
  * Return: the result
 */
-
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
