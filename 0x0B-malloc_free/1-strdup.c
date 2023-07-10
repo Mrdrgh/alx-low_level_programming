@@ -9,7 +9,11 @@ int _strlen(char *str)
 {
 	char *p = str;
 	int i = 0;
-
+	
+	if (!p)
+	{
+		return (0);
+	}
 	while (*p)
 	{
 		i++;
@@ -30,8 +34,8 @@ char *_strdup(char *str)
 	char *q = malloc(sizeof(char) * _strlen(str));
 	char *qq = q;
 
-	if (!q)
-	{
+	if (_strlen(str) == 0)
+	{	
 		return (NULL);
 	}
 
