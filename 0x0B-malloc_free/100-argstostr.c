@@ -8,14 +8,39 @@
 */
 char *argstostr(int ac, char **av)
 {
-	char *string;
+	char *string, *p;
 	int i, j;
 
-	if (!ac or !av)
+	if (ac == 0 || !av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		asprintf(&string,"%s\n",av[i]);
+		*p = av[i];
+		while (*p)
+		{
+			p++;
+			j++;
+		}
+		j++;
 	}
+	string = malloc(sizeof(char) * j + 1);
+	if (!string)
+		return (NULL);
+	j = 0;
+	for (i = 0; i < ac; i++)
+	{
+		p = av[i];
+		while (*p)
+		{
+			string[j++] = *p;
+			p++;
+		}
+		string[j++] = '\n';
+	}
+	string[j] = '\0';
 	return (string);
 }
+
+
+
+
