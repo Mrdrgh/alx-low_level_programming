@@ -46,14 +46,14 @@ char **strtow(char *str)
 		{
 			end = i;
 			sub_string = malloc(sizeof(char) * (c + 1));
-			if (!substring)
+			if (!sub_string)
 				return (NULL);
 			while (start < end)
 				*sub_string++ = str[start++];
 			*sub_string = '\0';
-			string[j] = substring - c;
+			string[j] = sub_string - c;
 			j++;
-			c = 0
+			c = 0;
 		}
 		else if (c++ == 0)
 			start = i;
