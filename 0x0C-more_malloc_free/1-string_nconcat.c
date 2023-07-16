@@ -6,35 +6,37 @@
  * @n: the number of chars
  * Return: the newly created string
 */
-
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len1 = 0;
-        unsigned int i = 0;
-	char *p1 = s1, *p2 = s2;
-	char *str;
+	char *s;
+	unsigned int i = 0, k = 0, len1 = 0, len2 = 0;
 
-	while (*(p1)++)
+	while (s1 && s1[len1])
 		len1++;
+	while (s2 && s2[len2])
+		len2++;
 
-	while (*(p2)++ && i++ < n)
-		len1++;
-	str = malloc(sizeof(char) * (len1 + 1));
-	if (!str)
+	if (n < len2)
+		s = malloc(sizeof(char) * (len1 + n + 1));
+	else
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
+
+	if (!s)
 		return (NULL);
-	p1 = s1;
-	p2 = s2;
-	i = 0;
-	while (*p1)
+
+	while (i < len1)
 	{
-		str[i++] = *p1;
-		p1++;
+		s[i] = s1[i];
+		i++;
 	}
-	while (*p2 && i <(unsigned int) len1)
-	{
-		str[i++] = *p2;
-		p2++;
-	}
-	str[i] = '\0';
-	return (str);
+	while (n < len2 && i < (len1 + n))
+		s[i++] = s2[k++];
+
+	while (n >= len2 && i < (len1 + len2))
+		s[i++] = s2[k++];
+
+	s[i] = '\0';
+
+	return (s);
 }
+
