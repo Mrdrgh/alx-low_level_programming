@@ -29,8 +29,6 @@ char *_strcpy(char *s1, char *s2)
 	char *p = s1;
 	char *q = s2;
 
-	if (!s1 || !s2)
-		return (NULL);
 	while (*p)
 		p++;
 	while (*q)
@@ -51,9 +49,10 @@ char *_strcpy(char *s1, char *s2)
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new = malloc(sizeof(dog_t));
+	dog_t *new;
 	int len_name = 0, len_owner = 0;
 
+	new = malloc(sizeof(dog_t));
 	if (!new)
 		return (NULL);
 	len_name = _strlen(name);
