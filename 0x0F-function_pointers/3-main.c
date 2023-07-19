@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	oop = argv[2];
 	arg1num = atoi(argv[1]);
 	arg2num = atoi(argv[3]);
-	if ((strcmp(oop, "/") == 0 && arg2num == 0) || (strcmp(oop, "%") == 0 && arg2num == 0));
+	if ((strcmp(oop, "/") == 0 && arg2num == 0) || (strcmp(oop, "%") == 0 && arg2num == 0))
 	{
 		printf("Error\n");
 		exit(100);
