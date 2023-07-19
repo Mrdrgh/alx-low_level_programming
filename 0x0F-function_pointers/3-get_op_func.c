@@ -2,6 +2,7 @@
 #include <string.h>
 /**
  * get_op_func - selects the right function for the function
+ * @s: fldkmqsdlfjqml
  * Return: a pointer to a function to work
 */
 int (*get_op_func(char *s))(int, int)
