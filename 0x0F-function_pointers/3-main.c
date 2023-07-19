@@ -10,11 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int arg1num, arg2num;
-	char *oop = malloc (10);
-
-	arg1num = atoi(argv[1]);
-	arg2num = atoi(argv[3]);
-	strcpy(oop, argv[2]);
+	char *oop;
 
 
 	if (argc != 4)
@@ -22,7 +18,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if ((arg2num == 0 && oop[0] == '/') || (arg1num == 0 && oop[0] == '%'))
+	oop = argv[2];
+	arg1num = atoi(argv[1]);
+	arg2num = atoi(argv[3]);
+	if ((strcmp(oop, "/") == 0 && arg2num == 0) || (strcmp(oop, "%") == 0 && arg2num == 0));
 	{
 		printf("Error\n");
 		exit(100);
