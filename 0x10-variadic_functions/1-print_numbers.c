@@ -7,7 +7,7 @@
  * @n: the number of args
 */
 
-void print_numbers(const char *separator, const unsigned n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list var;
 	unsigned int i;
@@ -23,7 +23,6 @@ void print_numbers(const char *separator, const unsigned n, ...)
 	}
 	printf("\n");
 	va_end(var);
-	return;
 }
 
 
