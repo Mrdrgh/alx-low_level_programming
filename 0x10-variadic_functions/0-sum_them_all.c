@@ -10,7 +10,7 @@ int sum_them_all(const unsigned int n, ...)
 	va_list var;
 	int i, nn = n;
 	int x = 0;
-	
+
 	if (!n)
 		return (0);
 	va_start(var, n);
@@ -21,4 +21,4 @@ int sum_them_all(const unsigned int n, ...)
 	}
 	return (x);
 }
-		
+
