@@ -24,7 +24,7 @@ unsigned int _str_len(const char *str)
 */
 list_t *add_node(list_t **head, const char *str)
 {
-	char *new_str = (char*) strdup(str);
+	char *new_str = (char *) strdup(str);
 	list_t *new_node = malloc(sizeof(list_t));
 
 	if (!new_node)
