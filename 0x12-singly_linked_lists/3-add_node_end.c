@@ -25,24 +25,23 @@ unsigned int _str_len(const char *str)
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	char *new_str = strdup(str);
-	list_t *curr = *head;
-	list_t *new_node = malloc(sizeof(list_t));
+    char *new_str = strdup(str);
+    list_t *curr = *head;
+    list_t *new_node = malloc(sizeof(list_t));
 
-	if (!new_node)
-		return (NULL);
-	if (!new_str)
-	{
-		free (new_node);
-		return (NULL);
-	}
-	new_node->next = NULL;
-	new_node->str = new_str;
-	while (curr->next)
-	{
-		curr = curr->next;
-	}
-	curr->next = new_node;
-	
-	return (*head);
+    if (!new_node)
+        return (NULL);
+    if (!new_str)
+    {
+        free (new_node);
+        return (NULL);
+    }
+    new_node->next = NULL;
+    new_node->str = new_str;
+    while (curr->next)
+    {
+        curr = curr->next;
+    }
+    curr->next = new_node;
+    return (*head);
 }
