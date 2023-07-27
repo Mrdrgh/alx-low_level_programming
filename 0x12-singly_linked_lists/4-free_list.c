@@ -12,9 +12,7 @@ void free_list(list_t *head)
 	{
 		temp = curr;
 		curr = curr->next;
-		temp = NULL;
 		free(temp);
 	}
-	free (curr);
 	free (head);
 }
