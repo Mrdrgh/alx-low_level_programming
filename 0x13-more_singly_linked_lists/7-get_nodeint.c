@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * get_nodint_at_index - gets the nth indexed node
+ * get_nodeint_at_index - gets the nth indexed node
  * @head: the list
  * @index: the index of the node to get
  * Return: the address of the returned node, if not existing NULL
