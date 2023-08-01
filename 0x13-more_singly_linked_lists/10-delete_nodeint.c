@@ -24,11 +24,14 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		curr = curr->next;
 		index--;
 	}
-	if (!index && curr) {
+	if (!index && curr)
+	{
 		temp->next = curr->next;
 		free(curr);
 		return (1);
-	} else {
+	}
+	else
+	{
 		return (-1);
 	}
 }
