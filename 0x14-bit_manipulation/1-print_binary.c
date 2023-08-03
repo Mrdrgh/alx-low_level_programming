@@ -5,11 +5,21 @@
 */
 void print_binary(unsigned long int n)
 {
-    unsigned long int mask = 1UL << (sizeof(n) * 8 - 1);
-    while (mask)
-    {
-        printf("%c", (n & mask) ? '1' : '0');
-        mask >>= 1;
-    }
-    printf("\n");
+	int i;
+	int count;
+
+	for (i = 63; i >= 0; i--)
+	{
+		count = n >> i;
+		if (count & 1)
+		{
+			_putchar('1');
+		}
+		else if (count | 0)
+		{
+			_putchar ('0');
+		}
+	}
+	if (!count)
+		_putchar('0');
 }
