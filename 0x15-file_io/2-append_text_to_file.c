@@ -21,7 +21,7 @@ int append_text_to_file(const char *filename, char *text_content)
 			length++;
 	}
 	chars_printed = write(file_descriptor, text_content, length);
-	if (chars_printed)
+	if (chars_printed == -1)
 		return (-1);
 	close(file_descriptor);
 	return (1);
