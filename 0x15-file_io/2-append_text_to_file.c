@@ -8,7 +8,7 @@
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	ssize_t file_descriptor, chars_printed, length;
+	int file_descriptor, chars_printed, length;
 
 	if (!filename)
 		return (-1);
