@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * read_textfile - reads a file stream into the stdout
  * @filename: the name of the file
@@ -15,11 +16,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (file_descriptor == -1)
 		return (-1);
 	buffer = malloc(sizeof(char) * letters);
-	if (!buffer)
-		return (0);
 	letters_read = read(file_descriptor, buffer, letters);
-	printed_chars = write(1, buffer, letters);
-	close(file_descriptor);
+	printed_chars = write(STDOUT_FILENO, buffer, letters_read);
 	free(buffer);
+	close(file_descriptor);
 	return (printed_chars);
 }
