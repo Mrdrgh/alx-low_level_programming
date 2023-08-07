@@ -12,7 +12,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (!filename)
 		return (-1);
-	file_descriptor = open(filename, O_APPEND | O_RDWR | O_CREAT);
+	file_descriptor = open(filename, O_APPEND | O_WRONLY);
 	if (file_descriptor == -1)
 		return (-1);
 	if (text_content)
@@ -23,6 +23,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	chars_printed = write(file_descriptor, text_content, length);
 	if (chars_printed)
 		return (-1);
-	close (file_descriptor);
+	close(file_descriptor);
 	return (1);
 }
