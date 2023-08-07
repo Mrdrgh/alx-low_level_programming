@@ -9,7 +9,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer;
-	ssize_t printed_chars, file_descriptor;
+	ssize_t printed_chars, file_descriptor, letters_read;
 
 	file_descriptor = open(filename, O_RDONLY);
 	if (file_descriptor == -1)
@@ -17,8 +17,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * letters);
 	if (!buffer)
 		return (0);
-	read(file_descriptor, buffer, letters);
-	printed_chars = write(STDOUT_FILENO, buffer, letters);
+	letters_read = read(file_descriptor, buffer, letters);
+	printed_chars = write(1, buffer, letters);
 	close(file_descriptor);
 	free(buffer);
 	return (printed_chars);
