@@ -23,7 +23,7 @@ void check_elf(unsigned char *h_entry)
 	}
 }
 /**
- * print_magic : prints the magic number of the elf header file
+ * print_magic - prints the magic number of the elf header file
  * @h_entry: the e_entry of the elf file
 */
 void print_magic(unsigned char *h_entry)
@@ -160,7 +160,7 @@ void print_abi(unsigned char *h_ident)
 }
 /**
  * print_type - prints the type of ELF
- * @h_type: the type of elf file
+ * @e: the type of elf file
  * @h_ident: the ident header of the elf file
 */
 void print_type(unsigned int e, unsigned char *h_ident)
