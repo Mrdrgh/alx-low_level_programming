@@ -30,7 +30,7 @@ void print_magic(unsigned char *h_entry)
 {
 	int index;
 
-	printf(" Magic: ");
+	printf("  Magic:   ");
 	for (index = 0; index < EI_NIDENT; index++)
 	{
 		printf("%02x", h_entry[index]);
@@ -50,7 +50,7 @@ void print_magic(unsigned char *h_entry)
 */
 void print_class(unsigned char *h_ident)
 {
-	printf(" Class: ");
+	printf("  Class:                             ");
 	switch (h_ident[EI_CLASS])
 	{
 		case ELFCLASSNONE:
@@ -72,7 +72,7 @@ void print_class(unsigned char *h_ident)
 */
 void print_endianness(unsigned char *h_ident)
 {
-	printf(" Data: ");
+	printf("  Data:                              ");
 	switch (h_ident[EI_DATA])
 	{
 		case ELFDATANONE:
@@ -94,7 +94,7 @@ void print_endianness(unsigned char *h_ident)
 */
 void print_version(unsigned char *h_ident)
 {
-	printf(" Version: %d", h_ident[EI_VERSION]);
+	printf("  Version:                           %d", h_ident[EI_VERSION]);
 	switch (h_ident[EI_VERSION])
 	{
 		case EV_CURRENT:
@@ -111,7 +111,7 @@ void print_version(unsigned char *h_ident)
 */
 void print_osabi(unsigned char *h_ident)
 {
-		printf(" OS/ABI: ");
+		printf("  OS/ABI:                            ");
 
 	switch (h_ident[EI_OSABI])
 	{
@@ -156,7 +156,7 @@ void print_osabi(unsigned char *h_ident)
 */
 void print_abi(unsigned char *h_ident)
 {
-	printf(" ABI Version: %d\n", h_ident[EI_ABIVERSION]);
+	printf("  ABI Version:                       %d\n", h_ident[EI_ABIVERSION]);
 }
 /**
  * print_type - prints the type of ELF
@@ -168,7 +168,7 @@ void print_type(unsigned int e, unsigned char *h_ident)
 		if (h_ident[EI_DATA] == ELFDATA2MSB)
 		e >>= 8;
 
-	printf(" Type: ");
+	printf("  Type:                              ");
 
 	switch (e)
 	{
@@ -198,7 +198,7 @@ void print_type(unsigned int e, unsigned char *h_ident)
  */
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
-	printf(" Entry point address: ");
+	printf("  Entry point address:               ");
 
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
