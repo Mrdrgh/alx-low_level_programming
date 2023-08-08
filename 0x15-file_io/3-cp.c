@@ -12,9 +12,9 @@
 */
 char *create_buffer(char *file)
 {
-	char *buffer; 
+	char *buffer;
 
-	buffer = malloc (sizeof(char) * 1024);
+	buffer = malloc(sizeof(char) * 1024);
 	if (!buffer)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
@@ -31,6 +31,7 @@ char *create_buffer(char *file)
 void close_file(int file_from, int file_to)
 {
 	int c = close(file_from);
+
 	if (c == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
@@ -57,7 +58,7 @@ int main(int ac, char *av[])
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
-		exit (97);
+		exit(97);
 	}
 	from = open(av[1], O_RDONLY);
 	if (from == -1)
@@ -86,7 +87,7 @@ int main(int ac, char *av[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	
+
 	close_file(from, to);
 	return (0);
 }
