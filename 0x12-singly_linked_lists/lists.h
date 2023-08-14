@@ -5,9 +5,9 @@
 #include <stdlib.h>
 /**
  * struct list_s - singly linked list
- * @str: string - (malloc'ed string)
- * @len: length of the string
- * @next: points to the next node
+ * @str: string - (mallocring
+ * @next: points to the n'ed string
+ * @len: length of the stext node
  *
  * Description: singly linked list node structure
  */
