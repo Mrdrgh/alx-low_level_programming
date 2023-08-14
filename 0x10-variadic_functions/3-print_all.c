@@ -27,12 +27,16 @@ void print_all(const char * const format, ...)
 					printf("%s%f", sep, va_arg(var, double));
 					break;
 				case 's':
+					{
 					str = va_arg(var, char*);
-					if (!str)
-						str = "(nil)";
-					else
-						printf("%s%s", sep, str);
+						if (!str)
+						{
+							str = "(nil)";
+							break;
+						}	
+					printf("%s%s", sep, str);
 					break;
+					}
 				default:
 					i++;
 					continue;
