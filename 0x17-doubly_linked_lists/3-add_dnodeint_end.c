@@ -17,10 +17,11 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	new_dnode->next = NULL;
 	if (!*head)
 	{
+		new_dnode->prev = *head;
 		*head = new_dnode;
 		return (new_dnode);
 	}
-	while (*head)
+	while ((*head)->next)
 		*head = (*head)->next;
 	(*head)->next = new_dnode;
 	new_dnode->prev = *head;
